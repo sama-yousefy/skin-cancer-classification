@@ -1,27 +1,23 @@
 # Skin Cancer Classification Using CNN
 
-## Project Overview
+A deep learning project for classifying skin lesion images into two categories: benign and malignant.
 
-This project focuses on binary image classification of skin lesions using a Convolutional Neural Network (CNN) implemented with PyTorch.
+## Overview
 
-The model is trained to classify skin lesion images into two categories:
+This project uses a Convolutional Neural Network (CNN) built with PyTorch to classify skin lesion images.
+
+The model learns visual patterns from the images and predicts whether a lesion belongs to the benign or malignant class.
+
+This project was developed for educational and research purposes.
+
+## Dataset
+
+The dataset contains two image classes:
 
 - Benign
 - Malignant
 
-## Model Architecture
-
-The CNN architecture consists of:
-
-- Three convolutional layers
-- ReLU activation functions
-- Max Pooling layers
-- Fully Connected layers
-- Dropout regularization (0.5)
-
-## Input Data
-
-The model processes RGB images with three color channels.
+The images were processed and prepared for training, validation, and testing.
 
 ## Technologies Used
 
@@ -31,25 +27,50 @@ The model processes RGB images with three color channels.
 - NumPy
 - Pandas
 - Matplotlib
+- Seaborn
 - Scikit-learn
-- OpenCV
 - Pillow
+- OpenCV
 
-## Project Workflow
+## Model Architecture
 
-1. Data preprocessing and image loading
-2. Image resizing and normalization
-3. Dataset preparation
-4. CNN model implementation
-5. Model training
-6. Model evaluation
+The CNN architecture includes:
 
-## Evaluation
+- Convolutional layers
+- ReLU activation functions
+- Max Pooling layers
+- Fully Connected layers
+- Dropout for reducing overfitting
 
-The model was evaluated using classification metrics to measure its performance on the test dataset.
+## Evaluation Metrics
 
-## Author
+The model was evaluated using:
 
-Sama Yousefy
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- Confusion Matrix
 
-GitHub: https://github.com/sama-yousefy
+## Results
+
+The model achieved an accuracy of 93.75% on the test dataset.
+
+| Class | Precision | Recall | F1-Score |
+|-------|-----------|--------|----------|
+| Benign | 95% | 94% | 94% |
+| Malignant | 93% | 93% | 93% |
+
+The results show relatively balanced performance between the two classes.
+
+## Project Structure
+
+```text
+skin-cancer-classification/
+│
+├── skin-cancer-classification.ipynb
+├── README.md
+├── requirements.txt
+└── dataset/
+    ├── benign/
+    └── malignant/
